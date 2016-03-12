@@ -44,5 +44,8 @@ Template.blogPost.helpers({
   },
   postReady: ()=> {
     return Template.instance().ready.get();
+  },
+  editPath: function() {
+    return FlowRouter.path('collections.posts.update', this);
   }
 });

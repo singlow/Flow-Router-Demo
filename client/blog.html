@@ -36,7 +36,12 @@
     {{#with post}}
       <article>
         <h1>{{title}}</h1>
-        <p class="meta">{{createdAt}} | {{author}}</p>
+        <p class="meta">
+          {{createdAt}} | {{author}}
+          {{#onlyIfLoggedIn}}
+            | <a href={{editPath}}>Edit</a>
+          {{/onlyIfLoggedIn}}
+        </p>
         <div class="content">
           {{{body}}}
         </div>
