@@ -18,3 +18,4 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 kadira:flow-router
 chuikoff:bootstrap-4
+kadira:blaze-layout
