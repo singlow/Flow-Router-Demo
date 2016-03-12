@@ -23,3 +23,5 @@ orionjs:core
 orionjs:bootstrap
 orionjs:froala
 huttonr:bootstrap3
+meteorhacks:subs-manager
+reactive-var
