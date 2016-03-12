@@ -18,7 +18,7 @@
   {{#if Template.subscriptionsReady}}
     {{#each posts}}
       <article>
-        <h2><a href="/blog/{{_id}}">{{title}}</a></h2>
+        <h2><a href="{{pathForPost}}">{{title}}</a></h2>
         <p>{{createdAt}}</p>
       </article>
     {{else}}

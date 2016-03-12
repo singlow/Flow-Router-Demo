@@ -10,6 +10,15 @@ Template.blogIndex.helpers({
   posts: ()=> {
     let posts = Posts.find( {}, { sort: [['createdAt', 'desc']] } );
     return posts;
+  },
+  pathForPost: function() {
+    let params = {
+      postId: this._id
+    }
+    let queryParams = {
+      coments: 'show'
+    }
+    return FlowRouter.path('blogPost', params, queryParams);
   }
 });
              
