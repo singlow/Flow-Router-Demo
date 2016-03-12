@@ -15,16 +15,34 @@
 <template name="blogIndex">
   <h1>Post Index</h1>
   <p>Here are my blog posts.</p>
-  <article>
-    <h2><a href="/blog/1">My first blog post</a></h2>
-  </article>
+  {{#if Template.subscriptionsReady}}
+    {{#each posts}}
+      <article>
+        <h2><a href="/blog/{{_id}}">{{title}}</a></h2>
+        <p>{{createdAt}}</p>
+      </article>
+    {{else}}
+      <p>No posts</p>
+    {{/each}}
+  {{else}}
+    <p>Loading...</p>
+  {{/if}}
 </template>
 
 <template name="blogPost">
-  <article>
-    <a href="/blog">Posts</a>
-    <h1>My first blog post</h1>
-    <p>This article is pretty boring. Just letting everyone know I'm starting
-    a blog.</p>
-  </article>
+  <a href="/blog">Posts</a>
+  
+  {{#if Template.subscriptionsReady}}
+    {{#with post}}
+      <article>
+        <h1>{{title}}</h1>
+        <p class="meta">{{createdAt}} | {{author}}</p>
+        <div class="content">
+          {{{body}}}
+        </div>
+      </article>
+    {{/with}}
+  {{else}}
+    <p>Loading ...</p>
+  {{/if}}
 </template>
