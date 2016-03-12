@@ -1,3 +1,5 @@
+PostSubs = new SubsManager();
+
 Template.blogIndex.onCreated(function() {
   this.autorun(() => {
     this.subscribe('posts');
@@ -13,9 +15,11 @@ Template.blogIndex.helpers({
              
 
 Template.blogPost.onCreated(function() {
+  this.ready = new ReactiveVar();
   this.autorun(() => {
     let postId = FlowRouter.getParam('postId');
-    this.subscribe('single-post', postId);
+    let handle = PostSubs.subscribe('single-post', postId);
+    this.ready.set(handle.ready());
   });
 });
 
@@ -28,5 +32,8 @@ Template.blogPost.helpers({
   author: function() {
     let user = Meteor.users.findOne( { _id: this.createdBy } ) || {};
     return user.profile.name;
+  },
+  postReady: ()=> {
+    return Template.instance().ready.get();
   }
 });

@@ -25,14 +25,14 @@
       <p>No posts</p>
     {{/each}}
   {{else}}
-    <p>Loading...</p>
+    <p class="loading">Loading...</p>
   {{/if}}
 </template>
 
 <template name="blogPost">
   <a href="/blog">Posts</a>
   
-  {{#if Template.subscriptionsReady}}
+  {{#if postReady}}
     {{#with post}}
       <article>
         <h1>{{title}}</h1>
@@ -43,6 +43,6 @@
       </article>
     {{/with}}
   {{else}}
-    <p>Loading ...</p>
+    <p class="loading">Loading ...</p>
   {{/if}}
 </template>
