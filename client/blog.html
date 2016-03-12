@@ -1,0 +1,30 @@
+<template name="blogLayout">
+  <header>
+    <div class="container">
+      <div class="title">Jacob's Blog</div>
+    </div>
+  </header>
+  <main class="container">
+    {{>Template.dynamic template=content}}
+  </main>
+  <footer>
+    <div class="container">Do or do not. There is no try.</div>
+  </footer>
+</template>
+
+<template name="blogIndex">
+  <h1>Post Index</h1>
+  <p>Here are my blog posts.</p>
+  <article>
+    <h2><a href="/blog/1">My first blog post</a></h2>
+  </article>
+</template>
+
+<template name="blogPost">
+  <article>
+    <a href="/blog">Posts</a>
+    <h1>My first blog post</h1>
+    <p>This article is pretty boring. Just letting everyone know I'm starting
+    a blog.</p>
+  </article>
+</template>
