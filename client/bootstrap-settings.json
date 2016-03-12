@@ -1,58 +1,57 @@
 {
-  "scss": {
-    "enableFlex": true,
-
+  "less": {
     "customVariables": false,
 
-    "exposeMixins": true,
+    "exposeMixins": false,
+
+    "compile": true,
 
     "modules": {
-       "alert": true,
-       "animation": true,
-       "breadcrumb": true,
-       "button-group": true,
+       "alerts": true,
+       "badges": true,
+       "breadcrumbs": true,
+       "button-groups": true,
        "buttons": true,
-       "card": true,
        "carousel": true,
        "close": true,
        "code": true,
-       "custom-forms": true,
-       "dropdown": true,
+       "component-animations": true,
+       "dropdowns": true,
        "forms": true,
+       "glyphicons": true,
        "grid": true,
-       "images": true,
-       "input-group": true,
+       "input-groups": true,
        "jumbotron": true,
        "labels": true,
        "list-group": true,
        "media": true,
-       "modal": true,
-       "nav": true,
+       "modals": true,
        "navbar": true,
+       "navs": true,
        "normalize": true,
        "pager": true,
        "pagination": true,
-       "popover": true,
+       "panels": true,
+       "popovers": true,
        "print": true,
-       "progress": true,
-       "reboot": true,
+       "progress-bars": true,
        "responsive-embed": true,
+       "responsive-utilities": true,
+       "scaffolding": true,
        "tables": true,
+       "thumbnails": true,
        "tooltip": true,
        "type": true,
        "utilities": true,
-       "utilities-background": true,
-       "utilities-responsive": true,
-       "utilities-spacing": true
+       "wells": true
     }
   },
 
   "javascript": {
-    "namespace": "Bootstrap",
-
     "expose": false,
 
     "modules": {
+      "affix": true,
       "alert": true,
       "button": true,
       "carousel": true,
@@ -63,7 +62,7 @@
       "scrollspy": true,
       "tab": true,
       "tooltip": true,
-      "util": true
+      "transition": true
     }
   },
 

@@ -18,5 +18,8 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 kadira:flow-router
 kadira:blaze-layout
-huttonr:bootstrap4
 fourseven:scss
+orionjs:core
+orionjs:bootstrap
+orionjs:froala
+huttonr:bootstrap3
