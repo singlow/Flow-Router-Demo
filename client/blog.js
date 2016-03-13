@@ -38,10 +38,6 @@ Template.blogPost.helpers({
     let post = Posts.findOne( { _id: postId } ) || {};
     return post;
   },
-  author: function() {
-    let user = Meteor.users.findOne( { _id: this.createdBy } ) || {};
-    return user.profile.name;
-  },
   postReady: ()=> {
     return Template.instance().ready.get();
   },

@@ -37,7 +37,8 @@
       <article>
         <h1>{{title}}</h1>
         <p class="meta">
-          {{createdAt}} | {{author}}
+          {{createdAt}}
+          | {{author.profile.name}}
           {{#onlyIfLoggedIn}}
             | <a href={{editPath}}>Edit</a>
           {{/onlyIfLoggedIn}}
